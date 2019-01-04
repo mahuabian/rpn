@@ -1,5 +1,5 @@
 /**
- * Alipay.com Inc.
+ * Company.com Inc.
  * Copyright (c) 2004-2019 All Rights Reserved.
  */
 package com.company.calc.oper;
