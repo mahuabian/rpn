@@ -63,16 +63,17 @@ public class RPNCalculator implements Calculator {
         int len;
         if (line != null && (len = line.length()) > 0) {
             int begin = 0;
-            for (int i = 0; i < len; i++) {
-                char c = line.charAt(i);
 
-                if (c == WHITE && begin == i) {
-                    begin++;
-                    continue;
-                }
+            for (int i = 0; i < len; i++) {
+
+                char c = line.charAt(i);
                 String op = null;
 
                 if (c == WHITE) {
+                    if (begin == i) {
+                        begin++;
+                        continue;
+                    }
                     op = line.substring(begin, i);
                 } else if (i == len - 1) {
                     op = line.substring(begin, len);
